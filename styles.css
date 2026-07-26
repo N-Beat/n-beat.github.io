@@ -1,0 +1,388 @@
+/* Theme variables */
+:root {
+    --bg: #0c0f1a;
+    --surface: #141a33;
+    --text: #f7f7ff;
+    --accent: #ff5a85;
+    --muted: #b3b9d1;
+
+    --surface-bg: rgba(255,255,255,0.04);
+    --surface-border: rgba(255,255,255,0.08);
+    --panel-bg: rgba(255,255,255,0.05);
+    --panel-border: rgba(255,255,255,0.1);
+    --surface-radius: 18px;
+    --panel-radius: 20px;
+    --card-padding: 26px;
+    --panel-padding: 24px;
+    --inner-padding: 18px;
+    --shadow-inset: inset 0 0 0 1px rgba(255,255,255,0.04);
+    --transition-default: transform .2s ease, box-shadow .2s ease;
+    --layout-gap: 24px;
+}
+
+/* Global reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Shared utility classes */
+.surface-box {
+    background: var(--surface-bg);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--surface-radius);
+    backdrop-filter: blur(10px);
+}
+
+.panel-box {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--panel-radius);
+    backdrop-filter: blur(10px);
+}
+
+.text-muted {
+    color: var(--muted);
+}
+
+.transition-default {
+    transition: var(--transition-default);
+}
+
+/* Surface component styles */
+.card,
+.event-item,
+.contact-text,
+.calendar-day {
+    background: var(--surface-bg);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--surface-radius);
+    backdrop-filter: blur(10px);
+}
+
+/* Page base styles */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 26, 51, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.logo img {
+    display: block;
+    height: 48px;
+    max-width: 180px;
+}
+.logo-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+.nav-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+}
+.nav-links a:hover {
+    color: var(--text);
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    padding: 40px 24px;
+    background: linear-gradient(180deg, rgba(12,15,26,0.92), rgba(12,15,26,0.92)), linear-gradient(135deg, rgba(255,90,133,0.18), rgba(74,111,255,0.14));
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255, 90, 133, 0.18), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(74, 111, 255, 0.16), transparent 24%);
+    pointer-events: none;
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    text-align: center;
+}
+.hero-brand {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+}
+.hero-brand img {
+    display: inline-block;
+    width: min(100%, 420px);
+    height: auto;
+}
+.hero h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+}
+.hero p {
+    margin: 0 auto 28px;
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+/* Button styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-default);
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(255, 90, 133, 0.24);
+}
+
+/* Main layout */
+main {
+    padding: 60px 24px;
+    max-width: 1100px;
+    margin: auto;
+}
+.section {
+    margin-bottom: 60px;
+}
+/* Section headings */
+.section-title {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.cards {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+    padding: var(--card-padding);
+}
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+/* Card components */
+.card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* Schedule table */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--panel-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-inset);
+}
+.schedule-table th,
+.schedule-table td {
+    padding: 18px 16px;
+    text-align: left;
+}
+.schedule-table th {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.schedule-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.02);
+}
+.schedule-table td {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: var(--muted);
+}
+.schedule-table td strong {
+    color: #fff;
+}
+/* Schedule note text */
+.schedule-note {
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Event list */
+.event-list {
+    display: grid;
+    gap: 16px;
+}
+.event-item {
+    padding: var(--inner-padding);
+}
+.event-item-date {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-weight: 700;
+}
+.event-item-title {
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 1.05rem;
+}
+.event-item-desc {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+}
+.event-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+/* Event link */
+.event-link:hover {
+    text-decoration: underline;
+}
+
+/* Schedule overview panels */
+.schedule-overview {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 24px;
+}
+.schedule-panel {
+    padding: var(--panel-padding);
+}
+.schedule-panel h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+}
+.calendar-day {
+    min-height: 120px;
+    padding: 14px;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+}
+.calendar-day.empty {
+    background: transparent;
+    border-color: transparent;
+    opacity: 0.2;
+}
+.calendar-day .day-num {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.calendar-event {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    margin-top: auto;
+    background: rgba(255,90,133,0.18);
+    color: #fff;
+}
+.calendar-event.jazz {
+    background: rgba(74,111,255,0.18);
+}
+.calendar-event.kids {
+    background: rgba(255,180,84,0.18);
+}
+/* Calendar event colors */
+.calendar-event.street {
+    background: rgba(110, 210, 180, 0.18);
+}
+
+/* Contact section */
+.contact {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1.2fr 0.8fr;
+}
+.contact-text {
+    padding: 28px;
+}
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--muted);
+}
+.contact-list li {
+    margin-bottom: 16px;
+}
+/* Footer */
+footer {
+    padding: 28px 24px;
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 24px;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .schedule-overview {
+        grid-template-columns: 1fr;
+    }
+    .calendar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px) {
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 720px) {
+    .contact {
+        grid-template-columns: 1fr;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+}
