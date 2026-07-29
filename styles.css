@@ -113,7 +113,7 @@ header {
     min-height: 80vh;
     display: grid;
     place-items: center;
-    padding: 40px 24px;
+    padding: 32px 24px;
     background: linear-gradient(180deg, rgba(12,15,26,0.92), rgba(12,15,26,0.92)), linear-gradient(135deg, rgba(255,90,133,0.18), rgba(74,111,255,0.14));
     overflow: hidden;
 }
@@ -172,6 +172,23 @@ header {
     box-shadow: 0 18px 40px rgba(255, 90, 133, 0.24);
 }
 
+.btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.12);
+}
+
+.contact-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
 /* Main layout */
 main {
     padding: 60px 24px;
@@ -191,6 +208,24 @@ main {
     text-transform: uppercase;
     font-size: 0.9rem;
 }
+.section-description {
+    margin: 0 0 24px;
+    color: var(--muted);
+}
+.sheet-embed-wrapper {
+    border: 1px solid var(--panel-border);
+    border-radius: var(--panel-radius);
+    overflow: hidden;
+    background: rgba(255,255,255,0.03);
+    padding: 8px;
+}
+.sheet-embed {
+    width: 100%;
+    min-height: 520px;
+    border: 0;
+    border-radius: calc(var(--panel-radius) - 6px);
+    background: #fff;
+}
 .cards {
     display: grid;
     gap: 24px;
@@ -207,6 +242,91 @@ main {
 .card p {
     margin: 0;
     color: var(--muted);
+}
+
+.genre-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-top: 12px;
+}
+
+.genre-card {
+    padding: var(--card-padding);
+    background: var(--surface-bg);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--surface-radius);
+    backdrop-filter: blur(10px);
+}
+
+.genre-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.genre-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.pricing-grid,
+.instructor-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 18px;
+}
+
+.price-card,
+.instructor-card {
+    padding: var(--card-padding);
+    background: var(--surface-bg);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--surface-radius);
+    backdrop-filter: blur(10px);
+}
+
+.price-card h3,
+.instructor-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.price-card p,
+.instructor-card p {
+    margin: 0 0 14px;
+    color: var(--muted);
+}
+
+.price-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+    color: var(--muted);
+}
+
+.price-card li::before {
+    content: '•';
+    color: var(--accent);
+    margin-right: 8px;
+}
+
+.instructor-role {
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 /* Schedule table */
@@ -239,6 +359,71 @@ main {
 }
 .schedule-table td strong {
     color: #fff;
+}
+
+.timetable-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.timetable-day {
+    background: var(--surface-bg);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--surface-radius);
+    padding: 18px;
+    min-height: 180px;
+}
+
+.timetable-day h4 {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+}
+
+.timetable-entry {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    background: rgba(255,255,255,0.04);
+}
+
+.timetable-entry:last-child {
+    margin-bottom: 0;
+}
+
+.timetable-time {
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.timetable-lesson {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.timetable-meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+}
+
+.timetable-desc {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.timetable-empty {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
 }
 /* Schedule note text */
 .schedule-note {
@@ -352,6 +537,43 @@ main {
 }
 .contact-list li {
     margin-bottom: 16px;
+}
+.contact-form {
+    display: grid;
+    gap: 16px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--surface-radius);
+    padding: 24px;
+}
+.contact-form label {
+    display: grid;
+    gap: 8px;
+    color: var(--text);
+    font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    font: inherit;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+.contact-form button {
+    width: fit-content;
+}
+.map-panel {
+    padding: 22px 24px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--surface-radius);
 }
 /* Footer */
 footer {
