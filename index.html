@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="N-Beat Dance Studio：福岡県直方市のLOCKとFreestyleを中心としたダンススタジオ。初心者歓迎、楽しく自分らしく踊れるレッスンを提供します。">
-    <title>N-BeatDance Studio</title>
+    <title>N-Beat Dance Studio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,10 +15,9 @@
         </div>
         <nav class="nav-links">
             <a href="#about">スタジオ</a>
-            <a href="#programs">レッスン内容</a>
-            <a href="#events">出演予定</a>
+            <a href="#programs">レッスン</a>
+            <a href="#schedule">スケジュール</a>
             <a href="#contact">お問い合わせ</a>
-            <a href="#access">アクセス</a>
         </nav>
     </header>
 
@@ -29,8 +27,8 @@
             <div class="hero-brand">
                 <img src="N-Beat.png" alt="N-Beat logo">
             </div>
-            <h1>踊ることが、もっと好きになる。<br>自分らしく輝ける、特別な場所。</h1>
-            <p>N-Beat dance studioではLOCKやfreestyleを中心に、自由に踊る楽しさと、自分らしく表現する喜びを。年齢や経験に関係なく、一人ひとりが輝ける場所を目指しています。</p>
+            <h1>自由に、リズムに乗る。<br>あなたのダンスをここから。</h1>
+            <p>N-Beat Dance Studioは、初心者から上級者まで楽しめるダンススタジオです。ストリート、ジャズ、ヒップホップなど幅広いジャンルのレッスンで、あなたの表現を応援します。</p>
             <a class="btn" href="#contact">体験レッスン予約</a>
         </div>
     </section>
@@ -40,123 +38,87 @@
         <section id="about" class="section">
             <p class="section-title">About</p>
             <h2>スタジオについて</h2>
-            <p>N-Beat dance studioは、先生と生徒の距離が近く、笑顔があふれるアットホームなダンススタジオです。<br>ダンスが初めての方も大歓迎！<br>一人ひとりの個性やペースを大切にしながら、楽しくのびのびと踊れる環境をつくっています。<br>ダンスを楽しむことはもちろん、仲間と一緒に過ごす中で、自信を持って自分らしく輝けるように。<br>N-Beatは、そんな一人ひとりの成長を応援する場所です。<br>子どもから大人まで、年齢や経験に関係なく、ダンスを始めたいと思ったその瞬間がスタートです。<br>「やってみたい！」という気持ちを大切に、N-Beatで一緒にダンスを楽しみませんか？</p>
-        </section>
-
-        <!-- Genres section -->
-        <section id="genres" class="section">
-            <p class="section-title">Genres</p>
-            <h2>ジャンル紹介</h2>
-            <div class="genre-grid">
-                <article class="genre-card">
-                    <h3>Lock Dance</h3>
-                    <p>Lock Danceは、1970年代のストリートカルチャーやディスコシーンの中で生まれたダンスです。<br>音楽のビートに合わせて動きを“止める・切り返す”ことで、リズム感や個性を表現し、今でもヒップホップやストリートダンスの魅力を支える重要な要素として親しまれています。</p>
-                </article>
-                <article class="genre-card">
-                    <h3>Freestyle</h3>
-                    <p>Freestyleは、決まった型に縛られず、自分の気持ちや音楽に合わせて自由に表現するダンスです。<br>自分らしさを出しながら、体の動かし方や表情を楽しめるので、初心者でも入りやすいジャンルです。</p>
-                </article>
-            </div>
+            <p>心地よい音楽と明るい空間が揃ったスタジオです。初心者でも安心して参加できる少人数制レッスンや、キッズクラス、ダンサー育成クラスまで幅広く対応しています。</p>
         </section>
 
         <!-- Programs section -->
         <section id="programs" class="section">
             <p class="section-title">Programs</p>
-            <h2>レッスン内容</h2>
-            <!--<p class="section-description">Google Sheets のスケジュールを読み込み、プログラムとして表示します。</p> -->
-            <div class="schedule-panel">
-                <div id="schedule-list" class="cards">
-                    <article class="card">
-                        <h3>読み込み中...</h3>
-                        <p>Google Sheets のプログラム情報を取得しています。</p>
-                    </article>
+            <h2>おすすめレッスン</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>ヒップホップ入門</h3>
+                    <p>リズムの取り方から基礎ステップまで、初心者でも楽しめるクラスです。</p>
+                </article>
+                <article class="card">
+                    <h3>ストリートダンス</h3>
+                    <p>フリースタイルや振付を通して、表現力と個性を育てます。</p>
+                </article>
+                <article class="card">
+                    <h3>キッズクラス</h3>
+                    <p>小学生向けの楽しいレッスン。体を動かす楽しさを大切にします。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Schedule section -->
+        <section id="schedule" class="section">
+            <p class="section-title">Schedule</p>
+            <h2>レッスンスケジュール</h2>
+            <div class="schedule-overview">
+                <!-- Lesson schedule panel -->
+                <div class="schedule-panel">
+                    <h3>今月のレッスン予定</h3>
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>週</th>
+                                <th>曜日</th>
+                                <th>内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1週目</td>
+                                <td>月・水・土</td>
+                                <td><strong>ヒップホップ / ジャズ / キッズ</strong></td>
+                            </tr>
+                            <tr>
+                                <td>2週目</td>
+                                <td>火・木・土</td>
+                                <td><strong>ストリート / シアタージャズ / キッズ</strong></td>
+                            </tr>
+                            <tr>
+                                <td>3週目</td>
+                                <td>月・水・土</td>
+                                <td><strong>ヒップホップ / ジャズ / キッズ</strong></td>
+                            </tr>
+                            <tr>
+                                <td>4週目</td>
+                                <td>火・木・土</td>
+                                <td><strong>ストリート / シアタージャズ / キッズ</strong></td>
+                            </tr>
+                            <tr>
+                                <td>5週目</td>
+                                <td>休み</td>
+                                <td><strong>スタジオメンテナンス & リフレッシュ週</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="schedule-note">※5週目はスタジオ休業のため、イベント準備や有志練習に使えます。</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Pricing section -->
-        <section id="pricing" class="section">
-            <p class="section-title">Pricing</p>
-            <h2>料金プラン</h2>
-            <div class="pricing-grid">
-                <article class="price-card">
-                    <h3>体験レッスン</h3>
-                    <p>初めての方限定。基本レッスンを1回体験できます。</p>
-                    <div class="price-value">1,500円</div>
-                    <ul>
-                        <li>1回60分</li>
-                        <li>初心者歓迎</li>
-                        <li>動きやすい服装でOK</li>
-                    </ul>
-                </article>
-                <article class="price-card">
-                    <h3>月謝プラン</h3>
-                    <p>固定クラスに通いやすい、スタンダードな月謝プラン。</p>
-                    <div class="price-value">8,000円 / 月</div>
-                    <ul>
-                        <li>週1回レッスン</li>
-                        <li>クラス変更可</li>
-                        <li>メンバー割引あり</li>
-                    </ul>
-                </article>
-                <article class="price-card">
-                    <h3>フリーパス</h3>
-                    <p>複数クラスを自由に受講したい方におすすめ。</p>
-                    <div class="price-value">12,000円 / 月</div>
-                    <ul>
-                        <li>週2回以上受講可</li>
-                        <li>イベント参加優先</li>
-                        <li>会員特典付き</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <!-- Instructors section -->
-        <section id="instructors" class="section">
-            <p class="section-title">Instructors</p>
-            <h2>講師紹介</h2>
-            <div class="instructor-grid">
-                <article class="instructor-card">
-                    <h3>TAKA</h3>
-                    <p class="instructor-role">LOCK / Freestyle</p>
-                    <p>親しみやすいレッスンと丁寧な指導が特長。基礎から表現力まで、一人ひとりの個性を引き出します。</p>
-                </article>
-                <article class="instructor-card">
-                    <h3>AYA</h3>
-                    <p class="instructor-role">Freestyle</p>
-                    <p>初心者にも安心のカリキュラムで、楽しくリズム感を育てる指導を行います。表現することの楽しさを大切にします。</p>
-                </article>
-                <article class="instructor-card">
-                    <h3>RYO</h3>
-                    <p class="instructor-role">Performance / Event</p>
-                    <p>イベントやパフォーマンス経験が豊富。ステージの見せ方やチームでの練習をサポートします。</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Events section -->
-        <section id="events" class="section">
-            <p class="section-title">Events</p>
-            <h2>出演予定</h2>
-            <!--<p class="section-description">Google Sheets のイベントタブを読み込み、出演予定を表示します。</p>-->
-            <div class="schedule-panel">
-                <div id="event-list" class="event-list">
-                    <article class="card">
-                        <h3>読み込み中...</h3>
-                        <p>Google Sheets のイベント情報を取得しています。</p>
-                    </article>
+                <!-- Event list panel -->
+                <div class="schedule-panel">
+                    <h3>出演予定</h3>
+                    <p>以下の出演情報は Google Sheets から読み込まれます。編集する場合はシートを開いて更新してください。</p>
+                    <div id="event-list" class="event-list">
+                        <article class="card">
+                            <h3>読み込み中...</h3>
+                            <p>Google Sheets と連携するには、シートIDを設定してください。</p>
+                        </article>
+                    </div>
+                    <p class="schedule-note"><a id="edit-sheet-link" href="#" target="_blank" rel="noopener">Google Sheetsで出演予定を編集</a></p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Access section -->
-        <section id="access" class="section">
-            <p class="section-title">Access</p>
-            <h2>アクセス</h2>
-            <p>「感田公民館」周辺のアクセス情報です。公共交通機関や車での来場に便利な立地です。</p>
-            <div class="map-panel">
-                <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%B2%A1%E7%9C%8B%E7%9B%B4%E6%96%B9%E5%B8%82%E6%84%9F%E7%94%B0%E5%85%AC%E6%B0%91%E9%A4%A8" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>
             </div>
         </section>
 
@@ -168,21 +130,13 @@
                 <p>レッスンのご予約やスタジオ見学は、お気軽にお問い合わせください。初心者の方も大歓迎です。</p>
             </div>
             <div>
-                <form class="contact-form" action="mailto:info@n-beat.jp" method="post" enctype="text/plain">
-                    <label>
-                        お名前
-                        <input type="text" name="name" placeholder="山田 太郎" required>
-                    </label>
-                    <label>
-                        メールアドレス
-                        <input type="email" name="email" placeholder="example@example.com" required>
-                    </label>
-                    <label>
-                        お問い合わせ内容
-                        <textarea name="message" rows="5" placeholder="体験レッスンについて知りたいです。" required></textarea>
-                    </label>
-                    <button class="btn" type="submit">送信する</button>
-                </form>
+                <ul class="contact-list">
+                    <li><strong>住所:</strong> 東京都渋谷区〇〇 1-2-3</li>
+                    <li><strong>電話:</strong> 03-1234-5678</li>
+                    <li><strong>メール:</strong> info@n-beat.jp</li>
+                    <li><strong>営業時間:</strong> 10:00 - 21:00</li>
+                </ul>
+                <a class="btn" href="mailto:info@n-beat.jp">メールで問い合わせ</a>
             </div>
         </section>
     </main>
