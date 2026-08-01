@@ -231,6 +231,7 @@ main {
 }
 .photo-block {
     margin: 40px 0;
+    width: 100%;
 }
 .photo-block-right {
     display: flex;
@@ -245,6 +246,8 @@ main {
     overflow: hidden;
     border-radius: 28px;
     min-height: 260px;
+    width: 100%;
+    max-width: 100%;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.11);
     box-shadow: 0 22px 48px rgba(0, 0, 0, 0.16);
@@ -682,6 +685,10 @@ footer {
     .photo-mosaic-inline {
         max-width: 100%;
     }
+    .photo-tile {
+        max-width: 420px;
+        width: 100%;
+    }
     .schedule-overview {
         grid-template-columns: 1fr;
     }
@@ -691,10 +698,13 @@ footer {
 }
 @media (max-width: 600px) {
     .photo-tile.photo-large {
-        min-height: 260px;
+        min-height: 220px;
     }
     .photo-tile.small {
-        min-height: 200px;
+        min-height: 180px;
+    }
+    .photo-tile {
+        max-width: 100%;
     }
     .calendar-grid {
         grid-template-columns: 1fr;
