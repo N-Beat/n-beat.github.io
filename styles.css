@@ -158,6 +158,7 @@ header {
 .hero-brand img {
     display: inline-block;
     width: min(100%, 420px);
+    max-width: 360px;
     height: auto;
     filter: drop-shadow(0 22px 40px rgba(0, 0, 0, 0.4));
 }
@@ -693,6 +694,9 @@ footer {
     }
     .photo-mosaic-inline {
         max-width: 100%;
+    }
+    .hero-brand img {
+        max-width: 320px;
     }
     .photo-tile {
         max-width: 420px;
