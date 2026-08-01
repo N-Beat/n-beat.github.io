@@ -26,12 +26,15 @@
     <!-- Hero section -->
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-photo photo-tile">
+                <img src="main.JPEG" alt="N-Beat イメージ">
+            </div>
             <div class="hero-brand">
                 <img src="N-Beat.png" alt="N-Beat logo">
             </div>
             <h1>踊ることが、もっと好きになる。<br>自分らしく輝ける、特別な場所。</h1>
             <p>N-Beat dance studioではLOCKやfreestyleを中心に、自由に踊る楽しさと、自分らしく表現する喜びを。年齢や経験に関係なく、一人ひとりが輝ける場所を目指しています。</p>
-            <a class="btn" href="#contact">体験レッスン予約</a>
+            <a class="btn" href="mailto:nbeatdancestudio@gmail.com?subject=体験レッスン予約">体験レッスン予約</a>
         </div>
     </section>
 
@@ -213,22 +216,9 @@
                 <h2>お問い合わせ・体験予約</h2>
                 <p>レッスンのご予約やスタジオ見学は、お気軽にお問い合わせください。初心者の方も大歓迎です。</p>
             </div>
-            <div>
-                <form class="contact-form" action="mailto:nbeatdancestudio@gmail.com" method="post" enctype="text/plain">
-                    <label>
-                        お名前
-                        <input type="text" name="name" placeholder="山田 太郎" required>
-                    </label>
-                    <label>
-                        メールアドレス
-                        <input type="email" name="email" placeholder="example@example.com" required>
-                    </label>
-                    <label>
-                        お問い合わせ内容
-                        <textarea name="message" rows="5" placeholder="体験レッスンについて知りたいです。" required></textarea>
-                    </label>
-                    <button class="btn" type="submit">送信する</button>
-                </form>
+            <div class="contact-actions">
+                <a class="btn" href="mailto:nbeatdancestudio@gmail.com?subject=体験レッスン予約">体験レッスン予約</a>
+                <a class="btn btn-secondary" href="mailto:nbeatdancestudio@gmail.com?subject=お問い合わせ">お問い合わせ</a>
             </div>
         </section>
     </main>

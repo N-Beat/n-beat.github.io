@@ -117,27 +117,30 @@ header {
 /* Hero section */
 .hero {
     position: relative;
-    min-height: 80vh;
+    min-height: 72vh;
     display: grid;
     place-items: center;
     padding: 32px 24px;
-    background: linear-gradient(180deg, rgba(12, 15, 26, 0.6), rgba(12, 15, 26, 0.6)),
-                url("main.JPEG") center/cover no-repeat;
+    background: radial-gradient(circle at top left, rgba(255, 90, 133, 0.22), transparent 24%),
+                radial-gradient(circle at bottom right, rgba(49, 197, 255, 0.16), transparent 20%),
+                linear-gradient(180deg, rgba(16, 20, 44, 0.95), rgba(12, 15, 26, 0.95));
     overflow: hidden;
 }
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at top left, rgba(255, 90, 133, 0.18), transparent 28%),
-                radial-gradient(circle at bottom right, rgba(74, 111, 255, 0.14), transparent 24%);
+    background: radial-gradient(circle at 20% 15%, rgba(255, 90, 133, 0.30), transparent 26%),
+                radial-gradient(circle at 85% 75%, rgba(74, 111, 255, 0.24), transparent 22%),
+                radial-gradient(circle at 50% 35%, rgba(255, 198, 84, 0.12), transparent 18%);
     pointer-events: none;
+    mix-blend-mode: screen;
 }
 .hero::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(12, 15, 26, 0.05), rgba(12, 15, 26, 0.55));
+    background: linear-gradient(180deg, rgba(12, 15, 26, 0.08), rgba(12, 15, 26, 0.72));
     pointer-events: none;
 }
 .hero-content {
@@ -162,6 +165,32 @@ header {
     height: auto;
     filter: drop-shadow(0 22px 40px rgba(0, 0, 0, 0.4));
 }
+
+/* Hero photo (use main image as a normal tile) */
+.hero-photo {
+    width: min(100%, 860px);
+    max-width: 880px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    box-shadow: 0 18px 48px rgba(0,0,0,0.28);
+}
+.hero-photo img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 720px) {
+    .hero-photo img {
+        height: 220px;
+    }
+    .hero {
+        min-height: 48vh;
+        padding: 20px 16px;
+    }
+}
 .hero h1 {
     margin: 0 0 16px;
     font-size: clamp(2.8rem, 5vw, 4.8rem);
@@ -185,10 +214,11 @@ header {
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition-default);
+    box-shadow: 0 14px 30px rgba(255, 90, 133, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 18px 40px rgba(255, 90, 133, 0.24);
+    box-shadow: 0 22px 48px rgba(255, 90, 133, 0.32), 0 0 30px rgba(255, 90, 133, 0.18);
 }
 
 .btn-secondary {
@@ -199,13 +229,6 @@ header {
 
 .btn-secondary:hover {
     box-shadow: 0 12px 30px rgba(255, 255, 255, 0.12);
-}
-
-.contact-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 18px;
 }
 
 /* Main layout */
@@ -433,6 +456,27 @@ main {
 @media (max-width: 720px) {
     .pricing-overview {
         grid-template-columns: 1fr;
+    }
+
+    /* Make hero focus on top area on small screens so important subject remains visible */
+    .hero {
+        background-position: center 18%;
+        min-height: 56vh;
+        padding: 20px 16px;
+        background-size: cover;
+    }
+
+    /* Slightly reduce the overlay so image detail shows on small screens */
+    .hero::after {
+        background: linear-gradient(180deg, rgba(12, 15, 26, 0.12), rgba(12, 15, 26, 0.55));
+    }
+
+    /* Tweak for very narrow screens */
+    @media (max-width: 420px) {
+        .hero {
+            background-position: center 12%;
+            min-height: 50vh;
+        }
     }
 }
 
@@ -666,37 +710,13 @@ main {
 .contact-list li {
     margin-bottom: 16px;
 }
-.contact-form {
-    display: grid;
-    gap: 16px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--surface-border);
-    border-radius: var(--surface-radius);
-    padding: 24px;
+.contact-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
 }
-.contact-form label {
-    display: grid;
-    gap: 8px;
-    color: var(--text);
-    font-weight: 600;
-}
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.12);
-    background: rgba(255,255,255,0.06);
-    color: #fff;
-    font: inherit;
-}
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: rgba(255,255,255,0.6);
-}
-.contact-form button {
-    width: fit-content;
-}
+
 .map-panel {
     padding: 22px 24px;
     background: rgba(255,255,255,0.04);
