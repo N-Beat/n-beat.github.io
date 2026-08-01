@@ -26,9 +26,6 @@
     <!-- Hero section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-photo photo-tile">
-                <img src="main.JPEG" alt="N-Beat イメージ">
-            </div>
             <div class="hero-brand">
                 <img src="N-Beat.png" alt="N-Beat logo">
             </div>
@@ -39,56 +36,66 @@
     </section>
 
     <main>
-        <div class="photo-block photo-block-large">
-            <article class="photo-tile photo-large">
-                <img src="photo1.JPG" alt="ダンスパフォーマンスの写真1">
-            </article>
-        </div>
-
         <!-- About section -->
-        <section id="about" class="section">
-            <p class="section-title">About</p>
-            <h2>スタジオについて</h2>
-            <p>直方のLOCKとFreestyleを中心としたアットホームなダンススタジオ。初心者歓迎。個性を大切に、楽しく踊れるレッスンを提供します。</p>
-        </section>
-
-        <div class="photo-block photo-block-small photo-block-right">
-            <article class="photo-tile small">
-                <img src="photo2.JPEG" alt="ダンスパフォーマンスの写真2">
-            </article>
-        </div>
-
-        <!-- Genres section -->
-        <section id="genres" class="section">
-            <p class="section-title">Genres</p>
-            <h2>ジャンル紹介</h2>
-            <div class="genre-grid">
-                <article class="genre-card">
-                    <h3>Lock Dance</h3>
-                    <p>Lock Danceは、1970年代のストリートカルチャーやディスコシーンの中で生まれたダンスです。<br>音楽のビートに合わせて動きを“止める・切り返す”ことで、リズム感や個性を表現し、今でもヒップホップやストリートダンスの魅力を支える重要な要素として親しまれています。</p>
+        <section id="about" class="section section-dark about-section">
+            <div class="about-text">
+                <p class="section-title">About</p>
+                <h2>スタジオについて</h2>
+                <p>直方のLOCKとFreestyleを中心としたアットホームなダンススタジオ。初心者歓迎。個性を大切に、楽しみながら踊れるレッスンを提供します。</p>
+            </div>
+            <div class="about-media">
+                <article class="photo-tile photo-large">
+                    <img src="main.JPEG" alt="N-Beat イメージ">
                 </article>
-                <article class="genre-card">
-                    <h3>Freestyle</h3>
-                    <p>Freestyleは、決まった型に縛られず、自分の気持ちや音楽に合わせて自由に表現するダンスです。<br>自分らしさを出しながら、体の動かし方や表情を楽しめるので、初心者でも入りやすいジャンルです。</p>
+                <article class="photo-tile photo-large">
+                    <img src="photo1.JPG" alt="ダンスパフォーマンスの写真1">
                 </article>
             </div>
         </section>
 
-        <div class="photo-block photo-block-small photo-block-left">
-            <article class="photo-tile small">
-                <img src="photo3.JPEG" alt="ダンスパフォーマンスの写真3">
-            </article>
-        </div>
+        <!-- Genres section -->
+        <section id="genres" class="section section-panel section-with-media">
+            <div class="section-content">
+                <div>
+                    <p class="section-title">Genres</p>
+                    <h2>ジャンル紹介</h2>
+                    <div class="genre-grid">
+                        <article class="genre-card">
+                            <h3>Lock Dance</h3>
+                            <p>Lock Danceは、1970年代のストリートカルチャーやディスコシーンの中で生まれたダンスです。<br>音楽のビートに合わせて動きを“止める・切り返す”ことで、リズム感や個性を表現し、今でもヒップホップやストリートダンスの魅力を支える重要な要素として親しまれています。</p>
+                        </article>
+                        <article class="genre-card">
+                            <h3>Freestyle</h3>
+                            <p>Freestyleは、決まった型に縛られず、自分の気持ちや音楽に合わせて自由に表現するダンスです。<br>自分らしさを出しながら、体の動かし方や表情を楽しめるので、初心者でも入りやすいジャンルです。</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="section-side-media">
+                    <article class="photo-tile small">
+                        <img src="photo2.JPEG" alt="ダンスパフォーマンスの写真2">
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <section id="programs" class="section">
-            <p class="section-title">Programs</p>
-            <h2>レッスン内容</h2>
-            <!--<p class="section-description">Google Sheets のスケジュールを読み込み、プログラムとして表示します。</p> -->
-            <div class="schedule-panel">
-                <div id="schedule-list" class="cards">
-                    <article class="card">
-                        <h3>読み込み中...</h3>
-                        <p>Google Sheets のプログラム情報を取得しています。</p>
+        <section id="programs" class="section section-alt section-with-media">
+            <div class="section-content">
+                <div>
+                    <p class="section-title">Programs</p>
+                    <h2>レッスン内容</h2>
+                    <!--<p class="section-description">Google Sheets のスケジュールを読み込み、プログラムとして表示します。</p> -->
+                    <div class="schedule-panel">
+                        <div id="schedule-list" class="cards">
+                            <article class="card">
+                                <h3>読み込み中...</h3>
+                                <p>Google Sheets のプログラム情報を取得しています。</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-side-media">
+                    <article class="photo-tile small">
+                        <img src="photo3.JPEG" alt="ダンスパフォーマンスの写真3">
                     </article>
                 </div>
             </div>
@@ -146,17 +153,17 @@
                         <div>20チケット：24,000円</div>
                     </div>
                 </article>
-            </div>
 
-            <article class="price-card">
-                <h3>割引</h3>
-                <ul class="discount-list">
-                    <li>◯ 2クラス受講 or 家族で2人以上ご入会</li>
-                    <li>リトルクラス：2クラス以上受講の場合 2,500円（兄弟姉妹・親子割引あり）</li>
-                    <li>キッズクラス以上：2クラス以上受講の場合 3,000円（兄弟姉妹・親子割引あり）</li>
-                    <li>パパママクラス：2クラス以上受講の場合 4,000円（夫婦割引あり）</li>
-                </ul>
-            </article>
+                <article class="price-card discount-card">
+                    <h3>割引</h3>
+                    <ul class="discount-list">
+                        <li>◯ 2クラス受講 or 家族で2人以上ご入会</li>
+                        <li>リトルクラス：2クラス以上受講の場合 2,500円（兄弟姉妹・親子割引あり）</li>
+                        <li>キッズクラス以上：2クラス以上受講の場合 3,000円（兄弟姉妹・親子割引あり）</li>
+                        <li>パパママクラス：2クラス以上受講の場合 4,000円（夫婦割引あり）</li>
+                    </ul>
+                </article>
+            </div>
 
         </section>
 
