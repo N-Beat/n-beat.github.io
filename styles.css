@@ -74,10 +74,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 22px;
     background: rgba(20, 26, 51, 0.95);
     position: sticky;
     top: 0;
     z-index: 10;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 .logo {
     display: inline-flex;
@@ -323,6 +329,23 @@ header {
 
 .btn-secondary:hover {
     box-shadow: 0 12px 30px rgba(255, 255, 255, 0.12);
+}
+
+.btn-instagram {
+    background: linear-gradient(135deg, #fd5c83 0%, #d62976 100%);
+    color: #fff;
+    padding: 12px 24px;
+    white-space: nowrap;
+}
+
+.btn-instagram::before {
+    content: '📷';
+    margin-right: 10px;
+}
+
+.btn-instagram:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(246, 84, 151, 0.28);
 }
 
 /* Main layout */
