@@ -341,13 +341,27 @@ header {
 }
 .hero h1 {
     margin: 0 0 16px;
-    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
 }
 .hero p {
     margin: 0 auto 28px;
     max-width: 680px;
     color: var(--muted);
-    font-size: 1.05rem;
+    font-size: clamp(0.98rem, 3vw, 1.05rem);
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: clamp(1.9rem, 2.5vw, 2.4rem);
+    line-height: 1.15;
+}
+
+h3,
+h4 {
+    margin: 0 0 12px;
+    line-height: 1.2;
 }
 
 /* Button styles */
@@ -1016,12 +1030,107 @@ footer {
     }
 }
 @media (max-width: 720px) {
-    .contact {
-        grid-template-columns: 1fr;
+    main {
+        padding: 28px 12px;
     }
     header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 14px;
+        gap: 10px;
+        padding: 14px 16px;
+    }
+    .header-right {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .logo {
+        width: auto;
+        align-self: flex-start;
+        justify-content: flex-start;
+    }
+    .logo-with-bg {
+        padding: 10px 14px;
+        max-width: 100%;
+    }
+    .btn-instagram {
+        flex-shrink: 0;
+    }
+    .menu-toggle {
+        margin-left: 0;
+    }
+    .nav-links {
+        width: min(100%, 90vw);
+        right: 12px;
+        top: 70px;
+    }
+    .nav-links a {
+        padding: 10px 0;
+    }
+    .hero {
+        min-height: 40vh;
+        padding: 14px 12px;
+    }
+    .hero-brand {
+        margin-bottom: 16px;
+    }
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 12px;
+    }
+    .hero p {
+        margin-bottom: 20px;
+        max-width: 100%;
+        font-size: clamp(0.95rem, 3.8vw, 1rem);
+    }
+    .section {
+        margin-bottom: 40px;
+        padding: 28px 0;
+    }
+    .section-dark,
+    .section-panel,
+    .section-alt {
+        padding: 34px 20px;
+    }
+    .section-with-media .section-content {
+        gap: 20px;
+    }
+    .about-media,
+    .section-side-media {
+        gap: 16px;
+    }
+    .photo-block {
+        margin: 24px 0;
+    }
+    .section-title {
+        font-size: 0.85rem;
+    }
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .timetable-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .timetable-day {
+        min-width: auto;
+    }
+    .timetable-day h4 {
+        font-size: 1rem;
+    }
+    .timetable-time,
+    .timetable-lesson,
+    .timetable-meta,
+    .timetable-desc {
+        font-size: 0.95rem;
+    }
+    footer {
+        padding: 20px 16px;
+        margin-top: 18px;
     }
 }
