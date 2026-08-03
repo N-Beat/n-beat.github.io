@@ -191,4 +191,22 @@ async function loadSchedule() {
 window.addEventListener('DOMContentLoaded', () => {
     loadEvents();
     loadSchedule();
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    const navLinks = mainNav ? mainNav.querySelectorAll('a') : [];
+
+    if (menuToggle && mainNav) {
+        const toggleMenu = () => {
+            const isOpen = mainNav.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        };
+
+        menuToggle.addEventListener('click', toggleMenu);
+        navLinks.forEach(link => link.addEventListener('click', () => {
+            if (mainNav.classList.contains('open')) {
+                toggleMenu();
+            }
+        }));
+    }
 });

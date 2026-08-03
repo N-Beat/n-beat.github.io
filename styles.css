@@ -84,6 +84,7 @@ header {
     display: flex;
     align-items: center;
     gap: 18px;
+    position: relative;
 }
 .logo {
     display: inline-flex;
@@ -199,6 +200,53 @@ header {
 }
 .nav-links a:hover {
     color: var(--text);
+}
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px 0;
+}
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 1px;
+}
+.menu-toggle span + span {
+    margin-top: 5px;
+}
+
+@media (max-width: 760px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        right: 0;
+        width: min(260px, 80vw);
+        flex-direction: column;
+        gap: 14px;
+        padding: 18px;
+        background: rgba(20, 26, 51, 0.96);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.26);
+        z-index: 15;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .menu-toggle {
+        display: inline-flex;
+        margin-left: auto;
+    }
 }
 
 /* Hero section */
